@@ -1,47 +1,55 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Sidebar from "./components/Sidebar.vue"
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="app">
+    <Sidebar />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <router-view />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style lang="scss">
+:root {
+ --primary: #5e81f4;
+ --dark: #1e1e1e;
+ --light: #dddddd;
+ --grey: #e0e0e0;
+ --dark-grey: #333333;
+ --red: #e53935;
+ --green: #00c853;
+ --blue: #2196f3;
+ --yellow: #ffca28;
+ --sidebar-width: 300px;
+}
+* {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
+body {
+  background : var(--light);
+  color: var(--dark);
+}
+button{
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.app {
+  display: flex;
+
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+.app main {
+    flex: 1 1 0;
+    padding: 2rem;
+    @media (max-width: 768px) {
+      padding-left: 6rem;
+    }
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
