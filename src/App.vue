@@ -15,6 +15,16 @@ import Sidebar from "./components/Sidebar.vue"
  --primary: #5e81f4;
  --dark: #1e1e1e;
  --light: #dddddd;
+  --white: #ffffff;
+  --black: #000000;
+  --light-blue: #53a1da;
+  --dark-blue: #1a73e8;
+  --light-green: #a5d6a7;
+  --dark-green: #388e3c;
+  --light-red: #ff8a80;
+  --dark-red: #d32f2f;
+ --light-yellow: #fff9c4;
+ --dark-yellow: #fbc02d;
  --grey: #e0e0e0;
  --dark-grey: #333333;
  --red: #e53935;
